@@ -14,8 +14,7 @@ public class Disciplina {
 
 	@Override
 	public String toString() {
-		return "\n - Disciplina: " + getNome() + "\n - curso: " + getCurso() + "\n - cargaHoraria: "
-				+ getCargaHoraria();
+		return "\n- Disciplina: " + getNome() + "\n- curso: " + getCurso() + "\n- cargaHoraria: " + getCargaHoraria();
 	}
 
 	public String getNome() {

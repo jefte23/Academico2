@@ -17,7 +17,7 @@ public class Turma {
 
 	@Override
 	public String toString() {
-		return "\n\tTurma \n - codigo: " + getCodigo() + "\n - professor: " + getProfessor() + "\n - diciplina: "
+		return "\n\tTurma\n- codigo: " + getCodigo() + "\n- professor: " + getProfessor() + "\n- diciplina: "
 				+ getDiciplina();
 	}
 
@@ -56,5 +56,21 @@ public class Turma {
 	// Metodo que adiciona 1 aluno à turma
 	public void adicionarAluno(Aluno aluno) {
 		this.alunos.add(aluno);
+	}
+
+	public String listarAlunos() {
+		String returno = "";
+
+		// verificar se exite alunos na turma
+		if (this.alunos.size() == 0) {
+			return "Nenhum aluno registrado na turma";
+		} else {
+
+			// Navegar pela Estrutura de alunos
+			for (int i = 0; i < this.alunos.size(); i++) {
+				returno = returno + "Nome: " + this.alunos.get(i).getNome() + "\n";
+			}
+		}
+		return returno;
 	}
 }

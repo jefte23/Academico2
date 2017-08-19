@@ -6,12 +6,6 @@ public class Principal {
 
 		LocalDate dataNasc1 = LocalDate.of(1988, 9, 17);
 
-		Aluno a1 = new Aluno("Jefté", "21750454", "masculino", dataNasc1);
-		System.out.println("\n<<< Aluno >>>" + a1);
-
-		Aluno a2 = new Aluno("Larine", "21750455", "Feminino", LocalDate.of(1990, 2, 03));
-		System.out.println("\n<<< Aluno >>>" + a2);
-
 		Disciplina d1 = new Disciplina("logica de Programação", "Ciência da Computação", 75);
 		System.out.println("\n<<< Disciplina >>> " + d1);
 
@@ -21,13 +15,29 @@ public class Principal {
 		Turma t1 = new Turma("Turma A", p1.getNome(), d1.getNome());
 		System.out.println("\n<<< Turma >>>" + t1);
 
+		// Instanciar Objetos da classe Aluno
+		Aluno a1 = new Aluno("Jefté", "21750454", "masculino", dataNasc1);
+		Aluno a2 = new Aluno("Larine", "21750455", "Feminino", LocalDate.of(1990, 2, 03));
+		Aluno a3 = new Aluno("João", "2170882", "Masculino", LocalDate.of(1992, 4, 21));
+		Aluno a4 = new Aluno("Raquel", "20129221", "Feminino", LocalDate.of(1990, 11, 13));
+		Aluno a5 = new Aluno("Eron", "21110112", "Masculino", LocalDate.of(1986, 8, 12));
+		Aluno a6 = new Aluno("Carlos", "20011221", "Masculino", LocalDate.of(1982, 3, 15));
+
 		// Adicinar A1 em T1
 		t1.adicionarAluno(a1);
-
 		t1.adicionarAluno(a2);
+		t1.adicionarAluno(a3);
+		t1.adicionarAluno(a4);
+		t1.adicionarAluno(a5);
+		t1.adicionarAluno(a6);
 
-		System.out.println("\n--------\n" + t1.getAlunos().get(1).getNome());
+		System.out.println("\n <<< Alunos >>>");
+		System.out.println(t1.listarAlunos());
 
+		Calculadora c = new Calculadora();
+		String mencao = c.calcularMencao(6.7);
+
+		System.out.println("Menção: " + mencao + "\nResultado: " + c.calcularResultado(mencao));
 	}
 
 }

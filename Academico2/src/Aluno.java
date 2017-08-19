@@ -7,17 +7,17 @@ public class Aluno {
 	private String sexo;
 	private LocalDate dataNascimento;
 
-	public Aluno(String nome, String rA, String sexo, LocalDate dataNascimento) {
+	public Aluno(String nome, String RA, String sexo, LocalDate dataNascimento) {
 		super();
 		this.nome = nome;
-		RA = rA;
+		this.RA = RA;
 		this.sexo = sexo;
 		this.dataNascimento = dataNascimento;
 	}
 
 	@Override
 	public String toString() {
-		return "\n - nome: " + getNome() + "\n -  RA: " + getRA() + "\n - Sexo: " + getSexo() + "\n - dataNascimento: ="
+		return "- nome: " + getNome() + "\n- RA: " + getRA() + "\n- Sexo: " + getSexo() + "\n- dataNascimento: "
 				+ getDataComoString();
 	}
 

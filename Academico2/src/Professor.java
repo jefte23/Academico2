@@ -16,8 +16,8 @@ public class Professor {
 
 	@Override
 	public String toString() {
-		return "\n - Professor: " + getNome() + "\n - Matricula: " + getMatricula() + "\n - titulação: "
-				+ getTitulação() + "\n - CPF: " + getCPF();
+		return "\n- Professor: " + getNome() + "\n- Matricula: " + getMatricula() + "\n- titulação: " + getTitulação()
+				+ "\n- CPF: " + getCPF();
 	}
 
 	public String getNome() {
